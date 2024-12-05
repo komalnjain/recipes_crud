@@ -1,66 +1,95 @@
+/* update.css */
+
 .update-container {
     max-width: 600px;
-    margin: 50px auto;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #f8f9fa;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.update-header {
-    margin-bottom: 20px;
-    text-align: center;
-    color: #343a40; 
-}
-
-.update-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.update-group {
-    margin-bottom: 15px;
-}
-
-.update-label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.update-control {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-}
-
-.update-control::placeholder {
-    color: #6c757d;
-}
-
-.update-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.update-button:hover {
-    background-color: #0056b3;
-}
-
-.update-back {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .update-back {
     display: inline-block;
     margin-bottom: 15px;
-    font-size: 16px;
-    color: #007bff;
     text-decoration: none;
-}
-
-.update-back:hover {
-    text-decoration: underline;
-}
+    color: #007bff;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .update-back:hover {
+    color: #0056b3;
+  }
+  
+  .update-header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .update-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .update-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .update-label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .update-control {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+  
+  .update-control:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .update-button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .update-button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .update-container {
+      padding: 15px;
+    }
+  
+    .update-control {
+      font-size: 14px;
+    }
+  
+    .update-button {
+      font-size: 14px;
+    }
+  }
+  

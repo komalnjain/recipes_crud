@@ -48,12 +48,12 @@ const Edit = () => {
   };
 
   return (
-    <div className='addUser'>
-      <Link to={"/"}>Back</Link>
-      <h3>Update Recipe</h3>
-      <form className='addUserForm' onSubmit={submitForm}>
-        <div className="inputGroup">
-          <label htmlFor="dish_name">Dish Name</label>
+    <div className='update-container'>
+      <Link to={"/"} className="update-back">Back</Link>
+      <h3 className="update-header">Update Recipe</h3>
+      <form className='update-form' onSubmit={submitForm}>
+        <div className="update-group">
+          <label htmlFor="dish_name" className="update-label">Dish Name</label>
           <input
             type="text"
             value={recipe.dish_name}
@@ -62,10 +62,11 @@ const Edit = () => {
             name="dish_name"
             autoComplete='off'
             placeholder='Dish Name'
+            className="update-control"
           />
         </div>
-        <div className="inputGroup">
-          <label htmlFor="cuisine">Cuisine</label>
+        <div className="update-group">
+          <label htmlFor="cuisine" className="update-label">Cuisine</label>
           <input
             type="text"
             value={recipe.cuisine}
@@ -74,10 +75,11 @@ const Edit = () => {
             name="cuisine"
             autoComplete='off'
             placeholder='Cuisine'
+            className="update-control"
           />
         </div>
-        <div className="inputGroup">
-          <label htmlFor="ingredients">Ingredients</label>
+        <div className="update-group">
+          <label htmlFor="ingredients" className="update-label">Ingredients</label>
           <input
             type="text"
             value={recipe.ingredients}
@@ -86,10 +88,11 @@ const Edit = () => {
             name="ingredients"
             autoComplete='off'
             placeholder='Ingredients'
+            className="update-control"
           />
         </div>
-        <div className="inputGroup">
-          <label htmlFor="cooking_time">Cooking Time</label>
+        <div className="update-group">
+          <label htmlFor="cooking_time" className="update-label">Cooking Time</label>
           <input
             type="number"
             value={recipe.cooking_time}
@@ -98,10 +101,11 @@ const Edit = () => {
             name="cooking_time"
             autoComplete='off'
             placeholder='Cooking Time (in mins)'
+            className="update-control"
           />
         </div>
-        <div className="inputGroup">
-          <label htmlFor="serving_size">Serving Size</label>
+        <div className="update-group">
+          <label htmlFor="serving_size" className="update-label">Serving Size</label>
           <input
             type="number"
             value={recipe.serving_size}
@@ -110,10 +114,11 @@ const Edit = () => {
             name="serving_size"
             autoComplete='off'
             placeholder='Serving Size'
+            className="update-control"
           />
         </div>
-        <div className="inputGroup">
-          <button type="submit">Update Recipe</button>
+        <div className="update-group">
+          <button type="submit" className="update-button">Update Recipe</button>
         </div>
       </form>
     </div>

@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./get.css"; // Import your CSS file
 
-
 const Recipe = () => {
   const [recipes, setRecipes] = useState([]);
 
@@ -17,7 +16,7 @@ const Recipe = () => {
       } catch (error) {
         console.error("Error fetching recipes:", error);
         toast.error("Failed to fetch recipes. Please try again later.", { position: "top-right" });
-      }  
+      }
     };
 
     fetchData();
@@ -35,9 +34,9 @@ const Recipe = () => {
   };
 
   return (
-    <div className="recipeTable">
-      <Link to="/add" className="addButton">Add Recipe</Link>
-      <table border={1} cellPadding={10} cellSpacing={0}>
+    <div className="get-container">
+      <Link to="/add" className="get-addButton">Add Recipe</Link>
+      <table className="get-table">
         <thead>
           <tr>
             <th>S.No.</th>
@@ -58,11 +57,11 @@ const Recipe = () => {
               <td>{recipe.ingredients}</td>
               <td>{recipe.cooking_time} mins</td>
               <td>{recipe.serving_size}</td>
-              <td className="actionButtons">
-                <button onClick={() => deleteRecipe(recipe._id)}>
+              <td className="get-actionButtons">
+                <button className="get-deleteButton" onClick={() => deleteRecipe(recipe._id)}>
                   <i className="fa-solid fa-trash">Delete</i>
                 </button>
-                <Link to={`/edit/${recipe._id}`}>
+                <Link to={`/edit/${recipe._id}`} className="get-editButton">
                   <i className="fa-solid fa-pen-to-square">Edit</i>
                 </Link>
               </td>
